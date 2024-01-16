@@ -1,3 +1,5 @@
+@use '../helpers' as *;
+
 .App {
   display: flex;
   flex-direction: column;
@@ -5,5 +7,7 @@
 
   .container {
     height: 100%;
+    color: $white;
+    background-color: $bg01;
   }
 }
