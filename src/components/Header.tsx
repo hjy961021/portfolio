@@ -3,27 +3,32 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header>
-      <div>
-        <h1>
-          <Link to="/">HONG JIYOUNG</Link>
-        </h1>
-        <ul>
-          <li>
-            <Link
-              to="https://github.com/hjy961021?tab=repositories"
-              target="_blank"
-            >
-              GIT
-            </Link>
-          </li>
-          <li>
-            <Link to="https://hongjiyoung.tistory.com/" target="_blank">
-              BLOG
-            </Link>
-          </li>
-        </ul>
-      </div>
+    <header className="header">
+      <h1 className="logo">
+        <Link to="/" className="link">
+          HONG JIYOUNG
+        </Link>
+      </h1>
+      <ul className="nav">
+        <li>
+          <Link
+            to="https://github.com/hjy961021?tab=repositories"
+            target="_blank"
+            className="link"
+          >
+            GIT
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="https://hongjiyoung.tistory.com/"
+            target="_blank"
+            className="link"
+          >
+            BLOG
+          </Link>
+        </li>
+      </ul>
     </header>
   );
 };
