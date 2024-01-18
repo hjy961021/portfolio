@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Header from './components/Header';
-import Main from './pages/Main';
+import Home from './pages/Home';
+import Footer from './components/Footer';
 
 const Router = () => {
   return (
@@ -10,8 +11,9 @@ const Router = () => {
       <Layout>
         <Header />
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Home />} />
         </Routes>
+        <Footer />
       </Layout>
     </BrowserRouter>
   );
