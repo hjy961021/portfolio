@@ -1,10 +1,10 @@
 import React from 'react';
-import Tab from '../components/Tab';
+import Fullpage from '../components/Fullpage';
 
 const Home = () => {
   return (
     <section className="contents">
-      <Tab />
+      <Fullpage />
     </section>
   );
 };

@@ -9,7 +9,7 @@
   align-items: center;
   width: calc(100% - 4rem);
   height: 5rem;
-  padding: 0 20px;
+  padding: 0 2rem;
   background-color: $bg01;
 
   .logo {
@@ -24,7 +24,7 @@
 
     li {
       ~ li {
-        margin-left: 10px;
+        margin-left: 1rem;
       }
 
       .link {
