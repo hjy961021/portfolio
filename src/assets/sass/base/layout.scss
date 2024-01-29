@@ -11,10 +11,15 @@
     background-color: $bg01;
 
     .contents {
-      height: calc(100% - 5rem);
-      padding-top: 5rem;
+      height: 100%;
 
       .page {
+        height: calc(100% - 6rem);
+        padding-top: 6rem;
+
+        > div {
+          height: 100%;
+        }
       }
     }
   }
