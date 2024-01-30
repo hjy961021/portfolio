@@ -3,14 +3,19 @@ import React from 'react';
 const About = () => {
   return (
     <div className="page about">
-      <div>
-        About
-        {/* <p>Main</p>
-        <p>자기소개(About)</p>
-        <p>일(Work)</p>
-        <p>프로젝트(Project)</p>
-        <p>블로그(Blog)</p>
-        <p>마치며(Contact)</p> */}
+      <div className="aboutArea">
+        <div className="profileArea">
+          <img src="" alt="" />
+        </div>
+        <div className="textArea">
+          <h2 className="title">About</h2>
+          <span className="text">about text</span>
+          <ul className="tagArea">
+            <li className="tag">html5</li>
+            <li className="tag">css</li>
+            <li className="tag">javascript</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

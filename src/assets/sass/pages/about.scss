@@ -1,0 +1,56 @@
+@use '../helpers' as *;
+
+.about {
+  .aboutArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .profileArea {
+      width: 40rem;
+      height: 40rem;
+      border-radius: 0.6rem;
+      background-color: #d9d9d9;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .textArea {
+      flex: 1;
+      width: 100%;
+      margin-left: 6rem;
+
+      .title {
+        font-weight: 700;
+        font-size: 4rem;
+        color: $primary;
+      }
+
+      .text {
+        display: block;
+        font-size: 2rem;
+        padding-top: 3rem;
+      }
+
+      .tagArea {
+        display: flex;
+        padding-top: 3rem;
+
+        .tag {
+          padding: 0.6rem 1.6rem;
+          font-weight: 500;
+          font-size: 2rem;
+          color: $primary;
+          border: 0.1rem solid $primary;
+          border-radius: 0.6rem;
+
+          ~ .tag {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
