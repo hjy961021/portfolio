@@ -1,0 +1,119 @@
+@use '../helpers' as *;
+
+.work {
+  .workArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+      padding: 0 10rem;
+      font-weight: 700;
+      font-size: 4rem;
+      color: $primary;
+    }
+
+    .swiper {
+      height: auto;
+      padding-top: 3rem;
+
+      .swiper-wrapper {
+        position: relative;
+        display: flex;
+
+        .swiper-slide {
+          flex-shrink: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      &-button-prev {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 2rem;
+        height: 4rem;
+        color: $white;
+        background: url('#{$image-path}/icon/arrow.png') center / 100% 100%
+          no-repeat;
+
+        transform: rotate(180deg);
+      }
+
+      &-button-next {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 2rem;
+        height: 4rem;
+        color: $white;
+        background: url('#{$image-path}/icon/arrow.png') center / 100% 100%
+          no-repeat;
+      }
+
+      &-button-disabled {
+        opacity: 0.4;
+      }
+    }
+
+    .listArea {
+      width: 100%;
+
+      ~ .listArea {
+        padding-top: 6rem;
+      }
+
+      .listTitle {
+        padding: 0 10rem;
+        font-weight: 500;
+        font-size: 3rem;
+      }
+
+      .listGroup {
+        display: flex;
+        align-items: center;
+        padding: 0 10rem;
+        padding-top: 2rem;
+
+        .imgArea {
+          width: 20rem;
+          height: 10rem;
+          border-radius: 0.6rem;
+          background-color: #d9d9d9;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .textArea {
+          margin-left: 2rem;
+
+          .listText {
+            font-size: 2rem;
+          }
+
+          .tagArea {
+            display: flex;
+            padding-top: 3rem;
+
+            .tag {
+              padding: 0.4rem 1rem;
+              font-weight: 500;
+              font-size: 1.6rem;
+              color: $primary;
+              border: 0.1rem solid $primary;
+              border-radius: 0.6rem;
+
+              ~ .tag {
+                margin-left: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
