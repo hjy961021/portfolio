@@ -1,0 +1,123 @@
+@use '../helpers' as *;
+
+.project {
+  .projectArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+      font-weight: 700;
+      font-size: 4rem;
+      color: $primary;
+    }
+
+    .swiper {
+      height: auto;
+      padding-top: 3rem;
+
+      .swiper-wrapper {
+        position: relative;
+        display: flex;
+
+        .swiper-slide {
+          flex-shrink: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      &-pagination {
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        bottom: 50%;
+        left: auto;
+
+        &-bullet {
+          margin: 0.4rem 0;
+        }
+      }
+    }
+
+    .projectGroup {
+      display: flex;
+      width: 100%;
+
+      .imgArea {
+        width: 60rem;
+        height: 40rem;
+        border-radius: 0.6rem;
+        background-color: #d9d9d9;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .projectBox {
+        padding-left: 6rem;
+
+        .titleArea {
+          .projectTitle {
+            font-weight: 500;
+            font-size: 3rem;
+          }
+
+          .title {
+            display: block;
+            padding-top: 2rem;
+            font-weight: 400;
+            font-size: 2rem;
+            color: $white;
+          }
+
+          .link {
+            display: block;
+            font-weight: 400;
+            font-size: 2rem;
+            color: $white;
+
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+
+        .textArea {
+          padding-top: 2rem;
+
+          .projectText {
+            font-weight: 500;
+            font-size: 3rem;
+          }
+
+          .text {
+            display: block;
+            padding-top: 2rem;
+            font-size: 2rem;
+          }
+        }
+
+        .tagArea {
+          display: flex;
+          padding-top: 2rem;
+
+          .tag {
+            padding: 0.4rem 1rem;
+            font-weight: 500;
+            font-size: 1.6rem;
+            color: $primary;
+            border: 0.1rem solid $primary;
+            border-radius: 0.6rem;
+
+            ~ .tag {
+              margin-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
