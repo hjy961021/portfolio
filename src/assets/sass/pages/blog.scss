@@ -1,0 +1,52 @@
+@use '../helpers' as *;
+
+.blog {
+  .blogArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+      font-weight: 700;
+      font-size: 4rem;
+      color: $primary;
+    }
+
+    .listArea {
+      padding-top: 1rem;
+
+      .list {
+        padding: 2rem 0;
+        border-bottom: 0.1rem solid $white;
+
+        .titleArea {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .listTitle {
+            font-weight: 500;
+            font-size: 3rem;
+
+            a {
+              &:hover {
+                color: $primary;
+              }
+            }
+          }
+
+          .listTime {
+            display: block;
+            font-size: 2rem;
+          }
+        }
+
+        .listText {
+          display: block;
+          padding-top: 2rem;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
