@@ -1,6 +1,7 @@
 @use '../helpers' as *;
 
 .main {
+  width: 100% !important;
   position: relative;
   background: url('#{$image-path}/visual/bg.png') center / 100% 100% no-repeat;
 
@@ -21,6 +22,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100% !important;
     height: 100%;
 
     .moonArea {

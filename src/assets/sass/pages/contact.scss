@@ -20,28 +20,32 @@
 
       &::before {
         content: '';
-        display: block;
-        width: 100%;
+        position: absolute;
+        top: 3rem;
+        left: 50%;
+        width: 170%;
         height: 28rem;
-        margin-top: 3rem;
         background: url('#{$image-path}/visual/contact.png') center / 100% 100%
           no-repeat;
+        transform: translateX(-50%);
       }
 
       &::after {
         content: '';
         position: absolute;
         top: 3rem;
-        left: 0;
-        width: 100%;
+        left: 50%;
+        width: 170%;
         height: 28rem;
         background-color: rgba(2, 7, 41, 0.3);
+        transform: translateX(-50%);
       }
 
       .text {
         display: block;
-        padding-top: 3rem;
-        font-size: 2.4rem;
+        padding-top: 34rem;
+        font-size: 2.2rem;
+        word-break: keep-all;
       }
 
       .listArea {
@@ -54,6 +58,7 @@
           }
 
           .btn {
+            display: block;
             padding: 0.6rem 1.6rem;
             font-weight: 500;
             font-size: 2rem;
@@ -64,6 +69,47 @@
             &:hover {
               color: $white;
               background-color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile(0, 1200px) {
+  .contact {
+    .contactArea {
+      .title {
+        font-size: 3.2rem;
+      }
+
+      .textArea {
+        align-items: flex-start;
+
+        &::before {
+          top: 1rem;
+          width: calc(100% + 8rem);
+          height: 20rem;
+        }
+
+        &::after {
+          top: 1rem;
+          width: calc(100% + 8rem);
+          height: 20rem;
+        }
+
+        .text {
+          padding-top: 22rem;
+          font-size: 1.6rem;
+        }
+
+        .listArea {
+          padding-top: 1rem;
+
+          .list {
+            .btn {
+              font-size: 1.4rem;
             }
           }
         }

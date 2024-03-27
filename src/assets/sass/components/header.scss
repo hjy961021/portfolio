@@ -4,14 +4,15 @@
   z-index: 10;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 8rem);
+  width: 120rem;
   height: 6rem;
   padding: 0 4rem;
   background-color: transparent;
+  transform: translateX(-50%);
 
   .logo {
     .link {
@@ -32,5 +33,11 @@
         font-size: 2rem;
       }
     }
+  }
+}
+
+@include mobile(0, 1200px) {
+  .header {
+    width: calc(100% - 8rem);
   }
 }

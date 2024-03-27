@@ -50,3 +50,34 @@
     }
   }
 }
+
+@include mobile(0, 1200px) {
+  .blog {
+    .blogArea {
+      .title {
+        font-size: 3.2rem;
+      }
+
+      .listArea {
+        .list {
+          padding: 1rem 0;
+
+          .titleArea {
+            .listTitle {
+              font-size: 2.4rem;
+            }
+
+            .listTime {
+              font-size: 1.6rem;
+            }
+          }
+
+          .listText {
+            padding-top: 1rem;
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}

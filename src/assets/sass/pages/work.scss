@@ -78,13 +78,21 @@
         padding-top: 2rem;
 
         .imgArea {
-          width: 20rem;
-          height: 10rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-width: 25rem;
+          min-height: 12rem;
           border-radius: 0.6rem;
-          background-color: #d9d9d9;
+          background-color: $white;
 
           img {
-            width: 100%;
+            display: block;
+            width: 15rem;
+
+            &.sm {
+              width: 10rem;
+            }
           }
         }
 
@@ -93,11 +101,12 @@
 
           .listText {
             font-size: 2rem;
+            word-break: keep-all;
           }
 
           .tagArea {
             display: flex;
-            padding-top: 3rem;
+            padding-top: 1rem;
 
             .tag {
               padding: 0.4rem 1rem;
@@ -109,6 +118,62 @@
 
               ~ .tag {
                 margin-left: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile(0, 1200px) {
+  .work {
+    padding: 0 4rem;
+
+    .workArea {
+      .title {
+        padding: 0 5rem;
+        font-size: 3.2rem;
+      }
+
+      .swiper {
+        padding-top: 1rem;
+      }
+
+      .listArea {
+        ~ .listArea {
+          padding-top: 4rem;
+        }
+
+        .listTitle {
+          padding: 0 5rem;
+          font-size: 2.4rem;
+        }
+
+        .listGroup {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 1rem 5rem 0 5rem;
+
+          .imgArea {
+            min-width: 20rem;
+            min-height: 10rem;
+          }
+
+          .textArea {
+            margin-left: 0;
+            padding-top: 1rem;
+
+            .listText {
+              font-size: 1.6rem;
+            }
+
+            .tagArea {
+              padding-top: 1rem;
+
+              .tag {
+                font-size: 1.4rem;
               }
             }
           }

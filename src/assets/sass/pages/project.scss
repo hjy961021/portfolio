@@ -46,18 +46,21 @@
       width: 100%;
 
       .imgArea {
-        width: 60rem;
-        height: 40rem;
+        min-width: 60rem;
+        max-width: 60rem;
+        min-height: 40rem;
+        max-width: 60rem;
         border-radius: 0.6rem;
-        background-color: #d9d9d9;
 
         img {
           width: 100%;
+          height: 40rem;
+          border-radius: 0.6rem;
         }
       }
 
       .projectBox {
-        padding-left: 6rem;
+        padding-left: 4rem;
 
         .titleArea {
           .projectTitle {
@@ -95,8 +98,9 @@
 
           .text {
             display: block;
-            padding-top: 2rem;
+            padding: 2rem 2rem 0 0;
             font-size: 2rem;
+            word-break: keep-all;
           }
         }
 
@@ -114,6 +118,79 @@
 
             ~ .tag {
               margin-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile(0, 1200px) {
+  .project {
+    padding: 0 4rem;
+
+    .projectArea {
+      .title {
+        font-size: 3.2rem;
+      }
+
+      .swiper {
+        padding-top: 1rem;
+      }
+
+      .projectGroup {
+        flex-direction: column;
+
+        .imgArea {
+          min-width: 50rem;
+          max-width: 50rem;
+          min-height: 30rem;
+          max-height: 30rem;
+
+          img {
+            height: 30rem;
+          }
+        }
+
+        .projectBox {
+          padding-top: 1rem;
+          padding-left: 0;
+
+          .titleArea {
+            .projectTitle {
+              font-size: 2.4rem;
+            }
+
+            .title {
+              padding-top: 1rem;
+              font-size: 1.6rem;
+            }
+
+            .link {
+              font-size: 1.6rem;
+            }
+          }
+
+          .textArea {
+            padding-top: 1rem;
+
+            .projectText {
+              font-size: 2.4rem;
+            }
+
+            .text {
+              padding-top: 1rem;
+              padding-right: 6rem;
+              font-size: 1.6rem;
+            }
+          }
+
+          .tagArea {
+            padding-top: 1rem;
+
+            .tag {
+              font-size: 1.4rem;
             }
           }
         }

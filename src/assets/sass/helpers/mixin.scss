@@ -1,3 +1,5 @@
+@use './variable' as *;
+
 @mixin blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -5,4 +7,23 @@
   height: 0.1rem;
   margin: -0.1rem;
   overflow: hidden;
+}
+
+// media query
+@mixin mobile($breakpoint-mobile, $breakpoint-tablet) {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet($breakpoint-tablet, $breakpoint-desktop) {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop($breakpoint-desktop) {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
 }

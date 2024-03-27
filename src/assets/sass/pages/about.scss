@@ -7,13 +7,14 @@
     align-items: center;
 
     .profileArea {
-      width: 40rem;
-      height: 40rem;
+      width: 38rem;
+      height: 50rem;
       border-radius: 0.6rem;
       background-color: #d9d9d9;
 
       img {
         width: 100%;
+        border-radius: 0.6rem;
       }
     }
 
@@ -30,8 +31,9 @@
 
       .text {
         display: block;
-        font-size: 2rem;
         padding-top: 3rem;
+        font-size: 2rem;
+        word-break: keep-all;
       }
 
       .tagArea {
@@ -48,6 +50,43 @@
 
           ~ .tag {
             margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile(0, 1200px) {
+  .about {
+    .aboutArea {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .profileArea {
+        width: 30rem;
+        height: 40rem;
+      }
+
+      .textArea {
+        margin-left: 0;
+        padding-top: 1rem;
+
+        .title {
+          font-size: 3.2rem;
+        }
+
+        .text {
+          padding-top: 1rem;
+          font-size: 1.6rem;
+        }
+
+        .tagArea {
+          padding-top: 2rem;
+
+          .tag {
+            font-size: 1.4rem;
           }
         }
       }
